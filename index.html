@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Kelve Oliveira - Editor de Vídeo Profissional | Portfólio</title>
+    <meta name="description" content="Editor de vídeo profissional com mais de 10 anos de experiência. Especialista em anúncios, VSL e conteúdo criativo. Entrega em 24h ou negociável.">
+    <meta property="og:title" content="Kelve Oliveira - Editor de Vídeo Profissional">
+    <meta property="og:description" content="Mais de 10 anos transformando ideias em vídeos impactantes. Trabalho nacional e internacional.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'theme1-primary': 'hsl(0, 0%, 0%)',
+                        'theme1-accent': 'hsl(51, 100%, 50%)',
+                        'theme1-secondary': 'hsl(0, 0%, 10%)',
+                        'theme1-text': 'hsl(0, 0%, 100%)',
+                        'theme1-muted': 'hsl(0, 0%, 80%)',
+                        'theme2-primary': 'hsl(0, 0%, 0%)',
+                        'theme2-accent': 'hsl(328, 100%, 54%)',
+                        'theme2-secondary': 'hsl(0, 0%, 10%)',
+                        'theme2-text': 'hsl(0, 0%, 100%)',
+                        'theme2-muted': 'hsl(0, 0%, 80%)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="theme1 antialiased bg-black text-white overflow-x-hidden font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-40 border-b border-theme1-accent/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-bold text-xl text-white flex items-center gap-2">
+                    <i data-lucide="film" class="text-theme1-accent" style="width: 24px; height: 24px;"></i>
+                    Kelve Oliveira
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="admin-btn" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-9 px-3 text-theme1-accent hover:bg-theme1-accent/10" title="Área administrativa">
+                        <i data-lucide="settings" style="width: 16px; height: 16px;"></i>
+                    </button>
+                    <button id="theme-toggle" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-9 px-3 text-theme1-accent hover:bg-theme1-accent/10">
+                        <i data-lucide="palette" style="width: 16px; height: 16px;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-theme1-secondary to-black"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Profile Image -->
+                <div class="lg:w-1/2 opacity-0 translate-y-8 animate-fade-in">
+                    <div class="relative">
+                        <div class="w-80 h-80 mx-auto rounded-2xl overflow-hidden border-4 border-theme1-accent/30 shadow-2xl transform hover:scale-105 transition-all duration-500">
+                            <img src="assets/profile.png" alt="Kelve Oliveira - Editor de Vídeo Profissional" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-theme1-accent rounded-full animate-pulse"></div>
+                        <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-theme1-accent/60 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="lg:w-1/2 text-center lg:text-left opacity-0 translate-y-8 animate-fade-in-delay">
+                    <h1 class="font-heading font-bold text-4xl md:text-6xl mb-6 text-white">
+                        Editor de Vídeo <span class="text-theme1-accent">Profissional</span>
+                    </h1>
+                    <p class="text-xl text-theme1-muted mb-8 leading-relaxed">
+                        Mais de 10 anos transformando ideias em vídeos impactantes. Especialista em anúncios, criativos e VSL para o mercado nacional e internacional.
+                    </p>
+                    
+                    <!-- Key Stats -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-theme1-secondary/50 p-4 rounded-xl border border-theme1-accent/20 hover:scale-105 transition-transform duration-300">
+                            <div class="font-bold text-2xl text-theme1-accent">10+</div>
+                            <div class="text-sm text-theme1-muted">Anos de Experiência</div>
+                        </div>
+                        <div class="bg-theme1-secondary/50 p-4 rounded-xl border border-theme1-accent/20 hover:scale-105 transition-transform duration-300">
+                            <div class="font-bold text-2xl text-theme1-accent">500+</div>
+                            <div class="text-sm text-theme1-muted">Projetos Entregues</div>
+                        </div>
+                        <div class="bg-theme1-secondary/50 p-4 rounded-xl border border-theme1-accent/20 hover:scale-105 transition-transform duration-300">
+                            <div class="font-bold text-2xl text-theme1-accent">24h</div>
+                            <div class="text-sm text-theme1-muted">Entrega Rápida</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button onclick="scrollToSection('portfolio')" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-10 px-8 bg-theme1-accent text-black hover:bg-theme1-accent/80 font-semibold">
+                            <i data-lucide="play" class="mr-2" style="width: 16px; height: 16px;"></i>
+                            Ver Portfólio
+                        </button>
+                        <button onclick="scrollToSection('contact')" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-8 border-theme1-accent text-gray-800 bg-white hover:bg-theme1-accent hover:text-black hover:border-theme1-accent group">
+                            <i data-lucide="message-circle" class="mr-2 text-gray-800 group-hover:text-black" style="width: 16px; height: 16px;"></i>
+                            <span class="text-gray-800 group-hover:text-black">Falar Comigo</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-theme1-secondary/30" id="about">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 opacity-0 translate-y-8 section-animate">
+                    <h2 class="font-heading font-bold text-4xl mb-8 text-white">
+                        Sobre <span class="text-theme1-accent">Kelve Oliveira</span>
+                    </h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-left opacity-0 translate-x-8 section-animate">
+                        <p class="text-lg text-theme1-muted mb-6">
+                            Com 25 anos e mais de uma década no mercado audiovisual, sou especializado em edição de vídeos para anúncios, conteúdo criativo e VSL (Video Sales Letter).
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="globe" class="text-theme1-accent" style="width: 20px; height: 20px;"></i>
+                                <span class="text-white">Trabalho internacional com diversos idiomas</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="building" class="text-theme1-accent" style="width: 20px; height: 20px;"></i>
+                                <span class="text-white">Experiência em empresa nacional de grande porte</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="languages" class="text-theme1-accent" style="width: 20px; height: 20px;"></i>
+                                <span class="text-white">Edição em português, espanhol e outros idiomas</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="clock" class="text-theme1-accent" style="width: 20px; height: 20px;"></i>
+                                <span class="text-white">Entrega em 24h ou prazo negociável</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6 opacity-0 translate-x-8 section-animate">
+                        <div class="bg-theme1-primary/50 p-6 rounded-xl border border-theme1-accent/20">
+                            <h3 class="font-semibold text-theme1-accent mb-3">Especialidades</h3>
+                            <ul class="space-y-2 text-theme1-muted">
+                                <li>• Anúncios e comerciais</li>
+                                <li>• Vídeos criativos e institucionais</li>
+                                <li>• VSL (Video Sales Letter)</li>
+                                <li>• Conteúdo educacional</li>
+                                <li>• Motion graphics e animações</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-theme1-accent/10 p-6 rounded-xl border border-theme1-accent/30">
+                            <h3 class="font-semibold text-theme1-accent mb-3">Trabalho Fixo Mensal</h3>
+                            <p class="text-theme1-muted">
+                                Disponível para contratos mensais com entrega contínua e suporte dedicado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-20" id="portfolio">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 opacity-0 translate-y-8 section-animate">
+                <h2 class="font-heading font-bold text-4xl mb-4 text-white">
+                    Meu <span class="text-theme1-accent">Portfólio</span>
+                </h2>
+                <p class="text-xl text-theme1-muted max-w-2xl mx-auto">
+                    Confira alguns dos meus trabalhos mais recentes e veja a qualidade que posso entregar para você.
+                    <span class="block mt-2 text-base text-theme1-accent">
+                        Para ver conteúdo sem censura ou mais vídeos diversificados, entre em contato via WhatsApp ou Instagram.
+                    </span>
+                </p>
+            </div>
+
+            <div id="video-portfolio" class="max-w-7xl mx-auto">
+                <!-- Videos will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-theme1-secondary/30" id="contact">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="opacity-0 translate-y-8 section-animate">
+                    <h2 class="font-heading font-bold text-4xl mb-8 text-white">
+                        Vamos <span class="text-theme1-accent">Trabalhar Juntos?</span>
+                    </h2>
+                    <p class="text-xl text-theme1-muted mb-12">
+                        Entre em contato comigo através dos canais abaixo e vamos transformar sua ideia em um vídeo impactante.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/557582943899?text=Ol%C3%A1%2C%20Gostaria%20de%20conhecer%20melhor%20sua%20Edi%C3%A7%C3%A3o%20de%20V%C3%ADdeo" target="_blank" rel="noopener noreferrer" class="block group opacity-0 translate-y-8 section-animate hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-theme1-primary/50 p-8 rounded-xl border border-theme1-accent/20 hover:border-theme1-accent/50 transition-all duration-300">
+                            <i data-lucide="message-circle" class="text-5xl text-green-500 mb-4 mx-auto" style="width: 48px; height: 48px;"></i>
+                            <h3 class="font-semibold text-xl mb-2 text-white">WhatsApp</h3>
+                            <p class="text-theme1-muted mb-4">Resposta rápida e atendimento personalizado</p>
+                            <span class="inline-block px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm">
+                                Chamar no WhatsApp
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/kelveoliveiraa/" target="_blank" rel="noopener noreferrer" class="block group opacity-0 translate-y-8 section-animate hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-theme1-primary/50 p-8 rounded-xl border border-theme1-accent/20 hover:border-theme1-accent/50 transition-all duration-300">
+                            <i data-lucide="instagram" class="text-5xl text-pink-500 mb-4 mx-auto" style="width: 48px; height: 48px;"></i>
+                            <h3 class="font-semibold text-xl mb-2 text-white">Instagram</h3>
+                            <p class="text-theme1-muted mb-4">Veja meus trabalhos e entre em contato</p>
+                            <span class="inline-block px-4 py-2 bg-pink-500/20 text-pink-400 rounded-full text-sm">
+                                Chamar no Instagram
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:kelveoliveira1@gmail.com" class="block group opacity-0 translate-y-8 section-animate hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-theme1-primary/50 p-8 rounded-xl border border-theme1-accent/20 hover:border-theme1-accent/50 transition-all duration-300">
+                            <i data-lucide="mail" class="text-5xl text-theme1-accent mb-4 mx-auto" style="width: 48px; height: 48px;"></i>
+                            <h3 class="font-semibold text-xl mb-2 text-white">Email</h3>
+                            <p class="text-theme1-muted mb-4">Para propostas formais e orçamentos</p>
+                            <span class="inline-block px-4 py-2 bg-theme1-accent/20 text-theme1-accent rounded-full text-sm">
+                                kelveoliveira1@gmail.com
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-16 p-8 bg-gradient-to-r from-theme1-accent/10 to-theme1-accent/5 rounded-2xl border border-theme1-accent/30 opacity-0 translate-y-8 section-animate">
+                    <h3 class="font-bold text-2xl mb-4 text-white">Pronto para começar?</h3>
+                    <p class="text-theme1-muted mb-6">
+                        Trabalho fixo mensal disponível • Entrega em 24h ou prazo negociável • Qualidade internacional
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="window.open('https://wa.me/557582943899?text=Ol%C3%A1%2C%20Gostaria%20de%20conhecer%20melhor%20sua%20Edi%C3%A7%C3%A3o%20de%20V%C3%ADdeo', '_blank')" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-10 px-8 bg-theme1-accent text-black hover:bg-theme1-accent/80 font-semibold">
+                            <i data-lucide="message-circle" class="mr-2" style="width: 16px; height: 16px;"></i>
+                            Conversar no WhatsApp
+                        </button>
+                        <button onclick="window.open('mailto:kelveoliveira1@gmail.com')" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-8 border-theme1-accent text-gray-800 bg-white hover:bg-theme1-accent hover:text-black hover:border-theme1-accent group">
+                            <i data-lucide="mail" class="mr-2 text-gray-800 group-hover:text-black" style="width: 16px; height: 16px;"></i>
+                            <span class="text-gray-800 group-hover:text-black">Enviar Email</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-theme1-primary border-t border-theme1-accent/20">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="font-bold text-2xl mb-4 text-white">Kelve Oliveira</div>
+                <p class="text-theme1-muted mb-6">Editor de Vídeo Profissional • 10+ Anos de Experiência</p>
+                
+                <div class="flex justify-center gap-6 mb-8">
+                    <a href="https://wa.me/557582943899" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-theme1-accent transition-colors">
+                        <i data-lucide="message-circle" style="width: 24px; height: 24px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kelveoliveiraa/" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-theme1-accent transition-colors">
+                        <i data-lucide="instagram" style="width: 24px; height: 24px;"></i>
+                    </a>
+                    <a href="mailto:kelveoliveira1@gmail.com" class="text-2xl hover:text-theme1-accent transition-colors">
+                        <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+                    </a>
+                </div>
+                
+                <p class="text-theme1-muted text-sm">
+                    © 2025 Kelve Oliveira. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Modal -->
+    <div id="admin-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-theme1-secondary rounded-xl p-6 w-full max-w-md border border-theme1-accent/20">
+            <h3 class="text-xl font-semibold text-white mb-4">Acesso Administrativo</h3>
+            <p class="text-theme1-muted mb-4">Digite o código de acesso:</p>
+            <input type="password" id="admin-code" class="w-full px-3 py-2 bg-black border border-theme1-accent/30 rounded-lg text-white focus:border-theme1-accent outline-none mb-4" placeholder="Código de acesso">
+            <div class="flex gap-3">
+                <button id="admin-submit" class="flex-1 bg-theme1-accent text-black py-2 px-4 rounded-lg font-semibold hover:bg-theme1-accent/80 transition-colors">
+                    Entrar
+                </button>
+                <button id="admin-cancel" class="flex-1 bg-gray-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
